@@ -3,51 +3,58 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 1600px;
+    width: 100%;
+    font-family: Inter, sans-serif;
 }
 
 .logo {
     width: 200px;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .textonav {
-    font-size: 40px;
-    color: #000;        
+    font-size: 2.5rem; /* 40px */
+    color: #000;
     font-weight: 700;
     font-family: Roboto, sans-serif;
+    text-align: center;
 }
 
 p {
-    font-size: 25px;
-    color: white;        
+    font-size: 1.5rem; /* 25px */
+    color: white;
     font-weight: 500;
-    margin-left: 300px;
-    margin-right: 300px;    
-    font-family: Inter, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
 }
 
 .invade {
     width: 50%;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: 390px;
+    max-width: 500px;
+    margin: 40px auto 20px auto;
     border-radius: 3%;
+    display: block;
 }
 
 .textos {
     background-color: rgb(187, 187, 1);
-    margin: 0px 0px 0px 0px;
-    padding: 10px 0px 10px 0px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .btt {
@@ -55,11 +62,8 @@ p {
     color: white;
     border: none;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 20px 2px;
+    margin: 20px 5px;
     cursor: pointer;
     border-radius: 5px;
     font-family: Inter, sans-serif;
@@ -70,4 +74,27 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Responsivo pra telas menores */
+@media (max-width: 768px) {
+    .textonav {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+
+    .invade {
+        width: 80%;
+    }
+
+    .btt {
+        width: 100%;
+        max-width: 300px;
+    }
 }
